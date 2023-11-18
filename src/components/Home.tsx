@@ -155,7 +155,7 @@ const Dashboard = () => {
                         <img src={URL+group[0].userAvatar} alt="Avatar" className="w-full h-auto object-contain rounded-full"></img>
                         <p className="font-semibold text-center pt-1">{group[0].userName} {group[0].userSurname}</p>
                     </div>
-                    <div className="break-words w-full ml-1">
+                    <div className="break-words w-full ml-1 mr-[1.25rem]">
                         <p className="my-5 mr-5">{postWithMention(group[0].content)}</p>
                         <div className={`grid grid-cols-2 ${group.length>2?"grid-rows-2":''}`}>
                         {group.map((post:any) => (
@@ -179,7 +179,7 @@ const Dashboard = () => {
                             <img src={URL+post.userAvatar} alt="Avatar" className="w-full h-auto object-contain rounded-full"></img>
                             <p className="font-semibold text-center pt-1">{group[0].userName} {group[0].userSurname}</p>
                         </div>
-                        <div className="break-words w-full ml-1">
+                        <div className="break-words w-full ml-1 mr-[1.25rem]">
                             <p className="my-5 mr-5">{postWithMention(post.content)}</p>
                             {post.mediaType === 'image/jpeg' || post.mediaType === 'image/png' ? <img src={post.media}/>:<></>}
                             {post.mediaType === 'video/mp4' ? <video width="400" height="400" controls><source src={post.media} type="video/mp4"></source></video>:<></>}
